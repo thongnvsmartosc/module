@@ -1,0 +1,28 @@
+#sloganContainer {
+	position: absolute;
+}
+
+#sloganText {
+	margin-top: 5px;
+	font-size: 14px;
+  color: #6391DA;
+}
+
+#EmailSubscribeReminder {
+	margin-top: 5px;
+	text-align: justify
+}
+#content1,#content2{
+	margin-bottom: 150px;
+}
+#topPictureContainer {
+	margin-bottom: 100px;
+}
+
+@media screen and (min-width: 768px) {
+	#EmailSubscribeReminder {
+		margin-top: 5px;
+		max-width: 318px;
+		text-align: justify
+	}
+}

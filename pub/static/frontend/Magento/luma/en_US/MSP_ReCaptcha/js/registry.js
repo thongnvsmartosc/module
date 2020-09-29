@@ -1,0 +1,1 @@
+/var/www/html/magento23/vendor/msp/recaptcha/view/frontend/web/js/registry.js
