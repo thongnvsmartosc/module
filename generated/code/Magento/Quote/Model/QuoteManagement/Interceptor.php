@@ -17,6 +17,45 @@ class Interceptor extends \Magento\Quote\Model\QuoteManagement implements \Magen
     /**
      * {@inheritdoc}
      */
+    public function createEmptyCart()
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'createEmptyCart');
+        if (!$pluginInfo) {
+            return parent::createEmptyCart();
+        } else {
+            return $this->___callPlugins('createEmptyCart', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function createEmptyCartForCustomer($customerId)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'createEmptyCartForCustomer');
+        if (!$pluginInfo) {
+            return parent::createEmptyCartForCustomer($customerId);
+        } else {
+            return $this->___callPlugins('createEmptyCartForCustomer', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function assignCustomer($cartId, $customerId, $storeId)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'assignCustomer');
+        if (!$pluginInfo) {
+            return parent::assignCustomer($cartId, $customerId, $storeId);
+        } else {
+            return $this->___callPlugins('assignCustomer', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function placeOrder($cartId, ?\Magento\Quote\Api\Data\PaymentInterface $paymentMethod = null)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'placeOrder');
@@ -24,6 +63,19 @@ class Interceptor extends \Magento\Quote\Model\QuoteManagement implements \Magen
             return parent::placeOrder($cartId, $paymentMethod);
         } else {
             return $this->___callPlugins('placeOrder', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCartForCustomer($customerId)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getCartForCustomer');
+        if (!$pluginInfo) {
+            return parent::getCartForCustomer($customerId);
+        } else {
+            return $this->___callPlugins('getCartForCustomer', func_get_args(), $pluginInfo);
         }
     }
 

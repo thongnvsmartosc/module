@@ -1,0 +1,1 @@
+/var/www/html/magento23/vendor/magento/module-rule/view/adminhtml/web/rules.js

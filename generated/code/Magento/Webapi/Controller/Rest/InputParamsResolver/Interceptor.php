@@ -26,4 +26,17 @@ class Interceptor extends \Magento\Webapi\Controller\Rest\InputParamsResolver im
             return $this->___callPlugins('resolve', func_get_args(), $pluginInfo);
         }
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getRoute()
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getRoute');
+        if (!$pluginInfo) {
+            return parent::getRoute();
+        } else {
+            return $this->___callPlugins('getRoute', func_get_args(), $pluginInfo);
+        }
+    }
 }

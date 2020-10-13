@@ -1,0 +1,48 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Team1\widgetItem\Block\Widget\Item" id="Team1_widgetItem_widget">
+        <label>Item catalog</label>
+        <description>Team1's uploads Item catalog</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" required="true" visible="true" sort_order="10">
+                <label>Title</label>
+            </parameter>
+            <parameter name="url" xsi:type="text" required="true" visible="true" sort_order="10">
+                <label>URL</label>
+            </parameter>
+            <parameter name="url_label" xsi:type="text" required="true" visible="true" sort_order="10">
+                <label>URL Label</label>
+            </parameter>
+            <parameter name="title_position" xsi:type="select" visible="true" required="true" sort_order="20">
+                <label translate="true">Title Position</label>
+                <options>
+                    <option name="center" value="center">
+                        <label>Center</label>
+                    </option>
+                    <option name="top" value="top">
+                        <label>Top</label>
+                    </option>
+                    <option name="top-bottom" value="top-bottom">
+                        <label>Top - Bottom</label>
+                    </option>
+                    <option name="bottom" value="bottom">
+                        <label>Bottom</label>
+                    </option>
+                    <option name="right" value="right">
+                        <label>Right</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="image" xsi:type="block" required="true" visible="true" sort_order="30">
+                <label translate="true">Image</label>
+                <block class="thongnv\widgetItem\Block\Widget\Item">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Choose image</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

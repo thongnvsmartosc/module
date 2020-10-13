@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="content">
+        <container name="homepage.banner.top.1" label="Homepage Top Banner 1" htmlTag="div" htmlClass="homepage top-banner-1">
+            <container name="homepage.banner.top.left" label="Homepage Top Banner 1 Left" htmlTag="div" htmlClass="left" />
+            <container name="homepage.banner.top.right.1" label="Homepage Top Banner 1 Right 1" htmlTag="div" htmlClass="right-1" />
+            <container name="homepage.banner.top.right.2" label="Homepage Top Banner 1 Right 2" htmlTag="div" htmlClass="right-2" />
+        </container>
+        <container name="homepage.banner.top.2" label="Homepage Top Banner 2" htmlTag="div" htmlClass="homepage top-banner-2">
+            <container name="homepage.banner.top.left.1" label="Homepage Top Banner 2 Left 1" htmlTag="div" htmlClass="left-1" />
+            <container name="homepage.banner.top.left.2" label="Homepage Top Banner 2 Left 2" htmlTag="div" htmlClass="left-2" />
+            <container name="homepage.banner.top.right" label="Homepage Top Banner 2 Right" htmlTag="div" htmlClass="right" />
+        </container>
+    </referenceContainer>
+</body>
+</page>

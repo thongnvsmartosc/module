@@ -17,6 +17,19 @@ class Interceptor extends \Magento\Catalog\Model\Indexer\Product\Category implem
     /**
      * {@inheritdoc}
      */
+    public function execute($ids)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
+        if (!$pluginInfo) {
+            return parent::execute($ids);
+        } else {
+            return $this->___callPlugins('execute', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function executeFull()
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'executeFull');

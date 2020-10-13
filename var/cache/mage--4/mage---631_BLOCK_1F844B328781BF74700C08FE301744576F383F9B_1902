@@ -1,0 +1,32 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1602560944;s:6:"expire";i:1602564544;s:4:"tags";s:138:"631_BLOCK_HTML,631_CAT_P_1902,631_CAT_P,631_CAT_P_1896,631_CAT_P_1897,631_CAT_P_1898,631_CAT_P_1899,631_CAT_P_1900,631_CAT_P_1901,631_MAGE";}
+<div class="swatch-opt-1902"
+     data-role="swatch-option-1902"></div>
+
+<script type="text/x-magento-init">
+    {
+        "[data-role=swatch-option-1902]": {
+            "Magento_Swatches/js/swatch-renderer": {
+                "selectorProduct": ".product-item-details",
+                "onlySwatches": true,
+                "enableControlLabel": false,
+                "numberToShow": 16,
+                "jsonConfig": {"attributes":{"143":{"id":"143","code":"size","label":"Size","options":[{"id":"171","label":"28","products":["1896","1897","1898"]},{"id":"172","label":"29","products":["1899","1900","1901"]}],"position":"0"},"93":{"id":"93","code":"color","label":"Color","options":[{"id":"50","label":"Blue","products":["1896","1899"]},{"id":"52","label":"Gray","products":["1897","1900"]},{"id":"53","label":"Green","products":["1898","1901"]}],"position":"1"}},"template":"$<%- data.price %>","currencyFormat":"$%s","optionPrices":{"1896":{"oldPrice":{"amount":63},"basePrice":{"amount":50.4},"finalPrice":{"amount":50.4},"tierPrices":[],"msrpPrice":{"amount":null}},"1897":{"oldPrice":{"amount":63},"basePrice":{"amount":50.4},"finalPrice":{"amount":50.4},"tierPrices":[],"msrpPrice":{"amount":null}},"1898":{"oldPrice":{"amount":63},"basePrice":{"amount":50.4},"finalPrice":{"amount":50.4},"tierPrices":[],"msrpPrice":{"amount":null}},"1899":{"oldPrice":{"amount":63},"basePrice":{"amount":50.4},"finalPrice":{"amount":50.4},"tierPrices":[],"msrpPrice":{"amount":null}},"1900":{"oldPrice":{"amount":63},"basePrice":{"amount":50.4},"finalPrice":{"amount":50.4},"tierPrices":[],"msrpPrice":{"amount":null}},"1901":{"oldPrice":{"amount":63},"basePrice":{"amount":50.4},"finalPrice":{"amount":50.4},"tierPrices":[],"msrpPrice":{"amount":null}}},"priceFormat":{"pattern":"$%s","precision":2,"requiredPrecision":2,"decimalSymbol":".","groupSymbol":",","groupLength":3,"integerRequired":false},"prices":{"oldPrice":{"amount":63},"basePrice":{"amount":50.4},"finalPrice":{"amount":50.4}},"productId":"1902","chooseText":"Choose an Option...","images":[],"index":{"1896":{"143":"171","93":"50"},"1897":{"143":"171","93":"52"},"1898":{"143":"171","93":"53"},"1899":{"143":"172","93":"50"},"1900":{"143":"172","93":"52"},"1901":{"143":"172","93":"53"}}},
+                "jsonSwatchConfig": {"143":{"171":{"type":"0","value":"28","label":"28"},"172":{"type":"0","value":"29","label":"29"},"additional_data":"{\"swatch_input_type\":\"text\",\"update_product_preview_image\":1,\"use_product_image_for_swatch\":0}"},"93":{"50":{"type":"1","value":"#1857f7","label":"Blue"},"52":{"type":"1","value":"#8f8f8f","label":"Gray"},"53":{"type":"1","value":"#53a828","label":"Green"},"additional_data":"{\"swatch_input_type\":\"visual\",\"update_product_preview_image\":1,\"use_product_image_for_swatch\":0}"}},
+                "mediaCallback": "http\u003A\u002F\u002Fnguyenvanthong.local\u002Fswatches\u002Fajax\u002Fmedia\u002F",
+                "jsonSwatchImageSizeConfig": {"swatchImage":{"width":30,"height":20},"swatchThumb":{"height":90,"width":110}},
+                "showTooltip": 1            }
+        }
+    }
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "[data-role=priceBox][data-price-box=product-id-1902]": {
+            "priceBox": {
+                "priceConfig": {
+                    "priceFormat": {"pattern":"$%s","precision":2,"requiredPrecision":2,"decimalSymbol":".","groupSymbol":",","groupLength":3,"integerRequired":false},
+                    "prices": {"oldPrice":{"amount":63},"basePrice":{"amount":50.4},"finalPrice":{"amount":50.4}}                }
+            }
+        }
+    }
+</script>

@@ -39,4 +39,30 @@ class Interceptor extends \Magento\SalesRule\Model\CouponRepository implements \
             return $this->___callPlugins('getById', func_get_args(), $pluginInfo);
         }
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getList');
+        if (!$pluginInfo) {
+            return parent::getList($searchCriteria);
+        } else {
+            return $this->___callPlugins('getList', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function deleteById($couponId)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'deleteById');
+        if (!$pluginInfo) {
+            return parent::deleteById($couponId);
+        } else {
+            return $this->___callPlugins('deleteById', func_get_args(), $pluginInfo);
+        }
+    }
 }

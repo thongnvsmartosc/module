@@ -26,4 +26,30 @@ class Interceptor extends \Magento\Checkout\Model\PaymentInformationManagement i
             return $this->___callPlugins('savePaymentInformationAndPlaceOrder', func_get_args(), $pluginInfo);
         }
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function savePaymentInformation($cartId, \Magento\Quote\Api\Data\PaymentInterface $paymentMethod, ?\Magento\Quote\Api\Data\AddressInterface $billingAddress = null)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'savePaymentInformation');
+        if (!$pluginInfo) {
+            return parent::savePaymentInformation($cartId, $paymentMethod, $billingAddress);
+        } else {
+            return $this->___callPlugins('savePaymentInformation', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPaymentInformation($cartId)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getPaymentInformation');
+        if (!$pluginInfo) {
+            return parent::getPaymentInformation($cartId);
+        } else {
+            return $this->___callPlugins('getPaymentInformation', func_get_args(), $pluginInfo);
+        }
+    }
 }

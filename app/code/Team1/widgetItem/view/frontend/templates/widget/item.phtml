@@ -1,0 +1,11 @@
+<?php
+/** @var Team1\widgetItem\Block\Widget\Item $block */
+/** @var Magento\Framework\Escaper $escaper */
+?>
+<a class="item-catalog" href="<?= $escaper->escapeHtml($block->getData('url')) ?>">
+    <img src="<?= $escaper->escapeHtml($block->getData('image')) ?>" alt="<?= $escaper->escapeHtml($block->getData('title')) ?>">
+    <span class="content <?= $escaper->escapeHtml($block->getData('title_position')) ?>">
+        <strong class="title"><?= $escaper->escapeHtml($block->getData('title')) ?></strong>
+        <span class="action more"><?= $escaper->escapeHtml($block->getData('url_label')) ?></span>
+    </span>
+</a>

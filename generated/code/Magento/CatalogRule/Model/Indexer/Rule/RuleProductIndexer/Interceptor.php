@@ -17,6 +17,19 @@ class Interceptor extends \Magento\CatalogRule\Model\Indexer\Rule\RuleProductInd
     /**
      * {@inheritdoc}
      */
+    public function execute($ids)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
+        if (!$pluginInfo) {
+            return parent::execute($ids);
+        } else {
+            return $this->___callPlugins('execute', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function executeFull()
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'executeFull');
@@ -24,6 +37,19 @@ class Interceptor extends \Magento\CatalogRule\Model\Indexer\Rule\RuleProductInd
             return parent::executeFull();
         } else {
             return $this->___callPlugins('executeFull', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getIdentities()
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getIdentities');
+        if (!$pluginInfo) {
+            return parent::getIdentities();
+        } else {
+            return $this->___callPlugins('getIdentities', func_get_args(), $pluginInfo);
         }
     }
 

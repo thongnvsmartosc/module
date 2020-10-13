@@ -17,6 +17,32 @@ class Interceptor extends \Magento\InventoryIndexer\Indexer\SourceItem\SourceIte
     /**
      * {@inheritdoc}
      */
+    public function executeFull()
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'executeFull');
+        if (!$pluginInfo) {
+            return parent::executeFull();
+        } else {
+            return $this->___callPlugins('executeFull', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function executeRow(int $sourceItemId)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'executeRow');
+        if (!$pluginInfo) {
+            return parent::executeRow($sourceItemId);
+        } else {
+            return $this->___callPlugins('executeRow', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function executeList(array $sourceItemIds)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'executeList');

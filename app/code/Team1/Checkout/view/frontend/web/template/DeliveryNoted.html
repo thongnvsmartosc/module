@@ -1,0 +1,20 @@
+
+<!--The 'step_code' value from the .js file should be used-->
+<li id="delivery_noted" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Delivery of Customer'" data-role="title"></div>
+        <div id="checkout-step-title"
+             class="step-content"
+             data-role="content">
+             <p>Customer Opinion:</p>
+     <textarea data-bind="text: getNoteContent()" name="" id="opinion" cols="30" rows="10"></textarea>
+            <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+                <div class="actions-toolbar">
+                    <div class="primary">
+                        <button data-role="opc-continue" type="submit" class="button action continue primary">
+                            <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </li>

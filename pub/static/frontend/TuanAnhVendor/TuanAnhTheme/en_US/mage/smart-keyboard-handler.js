@@ -1,1 +1,0 @@
-/var/www/html/magento23/lib/web/mage/smart-keyboard-handler.js

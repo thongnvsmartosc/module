@@ -341,8 +341,7 @@ require.config(config);
 var config = {
     map: {
         '*': {
-            popupWindow:            'mage/popup-window',
-            confirmRedirect:        'Magento_Security/js/confirm-redirect'
+            escaper: 'Magento_Security/js/escaper'
         }
     }
 };
@@ -358,7 +357,8 @@ require.config(config);
 var config = {
     map: {
         '*': {
-            escaper: 'Magento_Security/js/escaper'
+            popupWindow:            'mage/popup-window',
+            confirmRedirect:        'Magento_Security/js/confirm-redirect'
         }
     }
 };
@@ -635,6 +635,21 @@ var config = {
     }
 };
 
+require.config(config);
+})();
+(function() {
+var config = {
+    'config': {
+        'mixins': {
+           'Magento_Checkout/js/view/shipping': {
+               'Team1_Checkout/js/view/shipping-payment-mixin': true
+           },
+           'Magento_Checkout/js/view/payment': {
+               'Team1_Checkout/js/view/shipping-payment-mixin': true
+           }
+       }
+    }
+}
 require.config(config);
 })();
 
